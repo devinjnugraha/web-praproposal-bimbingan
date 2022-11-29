@@ -9,7 +9,7 @@
                     <th scope="col">Dosen Pengaju</th>
                     <th scope="col">NIP</th>
                     <th scope="col">Jumlah Kuota Diajukan</th>
-                    <th scope="col">Alasan</th>
+                    <th scope="col">Keterangan</th>
                     <th scope="col">Tanggal Pengajuan</th>
                     <th scope="col">Aksi</th>
                 </tr>
@@ -26,7 +26,7 @@
                         <td>{{ $dosens->find($pengajuan->dosen_id)->nama }}</td>
                         <td>{{ $dosens->find($pengajuan->dosen_id)->nip }}</td>
                         <td>{{ $pengajuan->kuota_diajukan }}</td>
-                        <td>{{ $pengajuan->alasan }}</td>
+                        <td>{{ $pengajuan->keterangan }}</td>
                         <td>{{ $pengajuan->created_at }}</td>
                         <td>
                             <form action="{{ route('approval.accept', $pengajuan) }}" method="post" class="d-inline">

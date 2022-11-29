@@ -4,7 +4,7 @@
         @if ($dosen != null)
             <div class="row align-items-center justify-content-end py-2">
                 <div class="col-2 d-flex justify-content-end">
-                    <p class="m-0">Kuota bimbingan: <span class="fw-semibold">
+                    <p class="m-0">Sisa Kuota Bimbingan: <span class="fw-semibold">
                             {{ $dosen->kuota - $bimbingans->count() }}/{{ $dosen->kuota }}
                         </span>
                     </p>
