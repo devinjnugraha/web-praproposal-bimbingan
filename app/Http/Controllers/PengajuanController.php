@@ -96,7 +96,7 @@ class PengajuanController extends Controller
      */
     public function accept(Pengajuan $pengajuan)
     {
-        if ($pengajuan->status == null) {
+        if ($pengajuan->status === null) {
             $dosen = Dosen::all()->find($pengajuan->dosen_id);
             $pengajuan->status = 1;
             $pengajuan->save();
@@ -116,7 +116,7 @@ class PengajuanController extends Controller
      */
     public function reject(Pengajuan $pengajuan)
     {
-        if ($pengajuan->status == null) {
+        if ($pengajuan->status === null) {
             $pengajuan->status = 0;
             $pengajuan->save();
         }
