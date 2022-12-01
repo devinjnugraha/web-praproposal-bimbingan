@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bimbingan;
 use App\Models\Dosen;
-use Illuminate\Http\Client\Request;
+use App\Models\Mahasiswa;
+use Illuminate\Http\Request;
 
-class BimbinganController extends Controller
+class MahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,11 @@ class BimbinganController extends Controller
      */
     public function index()
     {
-        $bimbingans = Bimbingan::all();
+        $mahasiswas = Mahasiswa::all();
         $dosen = Dosen::all()->first();
 
-        return view('bimbingan', [
-            'bimbingans' => $bimbingans,
+        return view('index', [
+            'mahasiswas' => $mahasiswas,
             'dosen' => $dosen,
         ]);
     }
@@ -37,7 +37,7 @@ class BimbinganController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreBimbinganRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -48,10 +48,10 @@ class BimbinganController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Bimbingan  $bimbingan
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function show(Bimbingan $bimbingan)
+    public function show(Mahasiswa $mahasiswa)
     {
         //
     }
@@ -59,10 +59,10 @@ class BimbinganController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Bimbingan  $bimbingan
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bimbingan $bimbingan)
+    public function edit(Mahasiswa $mahasiswa)
     {
         //
     }
@@ -70,11 +70,11 @@ class BimbinganController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateBimbinganRequest  $request
-     * @param  \App\Models\Bimbingan  $bimbingan
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bimbingan $bimbingan)
+    public function update(Request $request, Mahasiswa $mahasiswa)
     {
         //
     }
@@ -82,10 +82,10 @@ class BimbinganController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Bimbingan  $bimbingan
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bimbingan $bimbingan)
+    public function destroy(Mahasiswa $mahasiswa)
     {
         //
     }

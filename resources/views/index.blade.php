@@ -5,7 +5,7 @@
             <div class="row align-items-center justify-content-end py-2">
                 <div class="col-2 d-flex justify-content-end">
                     <p class="m-0">Sisa Kuota Bimbingan: <span class="fw-semibold">
-                            {{ $dosen->kuota - $bimbingans->count() }}/{{ $dosen->kuota }}
+                            {{ $dosen->kuota - $mahasiswas->count() }}/{{ $dosen->kuota }}
                         </span>
                     </p>
                 </div>
@@ -40,12 +40,12 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse ($bimbingans as $bimbingan)
+                @forelse ($mahasiswas as $mahasiswa)
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
-                        <td>{{ $bimbingan->nama }}</td>
-                        <td>{{ $bimbingan->nim }}</td>
-                        <td>{{ $bimbingan->topik_skripsi }}</td>
+                        <td>{{ $mahasiswa->nama }}</td>
+                        <td>{{ $mahasiswa->nim }}</td>
+                        <td>{{ $mahasiswa->topik_skripsi }}</td>
                     </tr>
                 @empty
                     <tr class="text-center">

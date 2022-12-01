@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Dosen;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Bimbingan>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Mahasiswa>
  */
-class BimbinganFactory extends Factory
+class MahasiswaFactory extends Factory
 {
     /**
      * Define the model's default state.

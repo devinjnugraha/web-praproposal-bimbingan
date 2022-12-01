@@ -22,8 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page"
-                            href="{{ route('bimbingan') }}">Bimbingan
+                        <a class="nav-link active text-light" aria-current="page" href="{{ route('index') }}">Bimbingan
                             Saya</a>
                     </li>
                     <li class="nav-item">

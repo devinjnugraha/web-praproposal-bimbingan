@@ -13,9 +13,9 @@ class Dosen extends Model
         'kuota' => '30'
     ];
 
-    public function bimbingans()
+    public function mahasiswas()
     {
-        return $this->hasMany(Bimbingan::class);
+        return $this->hasMany(Mahasiswa::class);
     }
 
     public function pengajuans()

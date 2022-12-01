@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BimbinganController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PengajuanController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [BimbinganController::class, 'index'])->name('bimbingan');
+Route::get('/', [MahasiswaController::class, 'index'])->name('index');
 
 Route::post('/pengajuan', [PengajuanController::class, 'store'])->name('store_pengajuan');
 

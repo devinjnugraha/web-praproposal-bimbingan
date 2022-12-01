@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
             'kuota' => '30',
         ]);
 
-        \App\Models\Bimbingan::factory(30)->create();
+        \App\Models\Mahasiswa::factory(30)->create();
     }
 }

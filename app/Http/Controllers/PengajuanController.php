@@ -42,10 +42,10 @@ class PengajuanController extends Controller
     {
         $dosen = Dosen::all()->first();
 
-        $sisa_kuota = $dosen->kuota - count($dosen->bimbingans);
+        $sisa_kuota = $dosen->kuota - count($dosen->mahasiswas);
 
         if ($sisa_kuota !== 0) {
-            return redirect(route('bimbingan'))->withErrors("Pengajuan ditolak. Anda masih memiliki $sisa_kuota kuota bimbingan.");
+            return redirect(route('index'))->withErrors("Pengajuan ditolak. Anda masih memiliki $sisa_kuota kuota bimbingan.");
         }
 
         $validatedData = $request->validate([
@@ -57,7 +57,7 @@ class PengajuanController extends Controller
 
         Pengajuan::create($validatedData);
 
-        return redirect(route('bimbingan'))->with('success', 'Pengajuan successfully stored.');
+        return redirect(route('index'))->with('success', 'Pengajuan successfully stored.');
     }
 
     /**

@@ -16,9 +16,6 @@
             </thead>
             <tbody>
                 @forelse ($pengajuans as $pengajuan)
-                    {{-- @if ($pengajuan->status !== null)
-                        @continue
-                    @endif --}}
                     <tr
                         @if ($pengajuan->status !== null) style="background-color: {{ $pengajuan->status === 1 ? '#97fcb2' : '#ff94a9' }}" @endif>
                         <td>{{ $loop->index + 1 }}</td>
